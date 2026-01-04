@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TimeZone Explorer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="timeZone.css" />
+  </head>
+  <body>
+    <div class="app-container">
+      <header>
+        <h1>TimeZone API</h1>
+        <p class="subtitle">
+          Discover time zones and location details instantly
+        </p>
+      </header>
+
+      <main class="grid-container">
+        <!-- Current Location Card -->
+        <section class="card current-location-card">
+          <div class="card-header">
+            <h2>Your Current Location</h2>
+          </div>
+          <div class="card-body">
+            <div class="locationon">
+              <h3>Turn on your location from “Site information”</h3>
+            </div>
+            <div class="data-row">
+              <span class="label">Time Zone</span>
+              <span class="value" id="current-timezone">Detecting...</span>
+            </div>
+            <div class="data-row">
+              <span class="label">Current Date</span>
+              <span class="value" id="current-date">-</span>
+            </div>
+            <div class="data-row">
+              <span class="label">Current Time</span>
+              <span class="value" id="current-time">-</span>
+            </div>
+            <div class="data-row">
+              <span class="label">Latitude</span>
+              <span class="value" id="current-lat">-</span>
+            </div>
+            <div class="data-row">
+              <span class="label">Longitude</span>
+              <span class="value" id="current-lon">-</span>
+            </div>
+            <div class="data-row">
+              <span class="label">Offset STD</span>
+              <span class="value" id="current-offset-std">-</span>
+            </div>
+            <div class="data-row">
+              <span class="label">Offset STD Seconds</span>
+              <span class="value" id="current-offset-std-sec">-</span>
+            </div>
+            <div class="data-row">
+              <span class="label">Offset DST</span>
+              <span class="value" id="current-offset-dst">-</span>
+            </div>
+            <div class="data-row">
+              <span class="label">Offset DST Seconds</span>
+              <span class="value" id="current-offset-dst-sec">-</span>
+            </div>
+            <div class="data-row">
+              <span class="label">Country</span>
+              <span class="value" id="current-country">-</span>
+            </div>
+            <div class="data-row">
+              <span class="label">Postcode</span>
+              <span class="value" id="current-postcode">-</span>
+            </div>
+            <div class="data-row">
+              <span class="label">City</span>
+              <span class="value" id="current-city">-</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Address Search Card -->
+        <section class="card search-card">
+          <div class="card-header">
+            <h2>Search by Address</h2>
+          </div>
+          <div class="card-body">
+            <form id="address-time-zone-form" class="search-form">
+              <input
+                type="text"
+                id="address-input"
+                placeholder="Enter city, address, or zip code"
+                name="address"
+                required
+              />
+              <button type="submit">Check TimeZone</button>
+            </form>
+
+            <div class="results-container">
+              <div class="data-row">
+                <span class="label">Time Zone</span>
+                <span class="value" id="search-timezone">-</span>
+              </div>
+              <div class="data-row">
+                <span class="label">Current Date</span>
+                <span class="value" id="search-date">-</span>
+              </div>
+              <div class="data-row">
+                <span class="label">Current Time</span>
+                <span class="value" id="search-time">-</span>
+              </div>
+              <div class="data-row">
+                <span class="label">Latitude</span>
+                <span class="value" id="search-lat">-</span>
+              </div>
+              <div class="data-row">
+                <span class="label">Longitude</span>
+                <span class="value" id="search-lon">-</span>
+              </div>
+              <div class="data-row">
+                <span class="label">Offset STD</span>
+                <span class="value" id="search-offset-std">-</span>
+              </div>
+              <div class="data-row">
+                <span class="label">Offset STD Seconds</span>
+                <span class="value" id="search-offset-std-sec">-</span>
+              </div>
+              <div class="data-row">
+                <span class="label">Offset DST</span>
+                <span class="value" id="search-offset-dst">-</span>
+              </div>
+              <div class="data-row">
+                <span class="label">Offset DST Seconds</span>
+                <span class="value" id="search-offset-dst-sec">-</span>
+              </div>
+              <div class="data-row">
+                <span class="label">Country</span>
+                <span class="value" id="search-country">-</span>
+              </div>
+              <div class="data-row">
+                <span class="label">Postcode</span>
+                <span class="value" id="search-postcode">-</span>
+              </div>
+              <div class="data-row">
+                <span class="label">City</span>
+                <span class="value" id="search-city">-</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+  <p>
+    Powered by
+    <a href="https://kirtandel.vercel.app/" target="_blank">kirtandel</a>
+  </p>
+</footer>
+    </div>
+
+    <script src="timeZone.js"></script>
+  </body>
+</html>
